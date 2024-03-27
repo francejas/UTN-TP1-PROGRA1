@@ -1,0 +1,194 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "pila.h"
+
+
+//1
+/*
+void Random();
+
+
+int main() {
+    Random();
+    return 0;
+}
+
+void Random() {
+    srand(time(NULL));
+    int numero = rand() % 100;
+    printf("El numero es: %i\n", numero);
+}
+*/
+
+
+//2
+/*
+void encontrarMayorMenor();
+
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Ingrese el primer número: ");
+    scanf("%d", &num1);
+
+    printf("Ingrese el segundo número: ");
+    scanf("%d", &num2);
+
+    printf("Ingrese el tercer número: ");
+    scanf("%d", &num3);
+
+    encontrarMayorMenor(num1, num2, num3);
+
+    return 0;
+}
+
+
+void encontrarMayorMenor(int num1, int num2, int num3) {
+    int mayor, menor;
+
+    // Comparación para encontrar el mayor
+    if (num1 >= num2 && num1 >= num3) {
+        mayor = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        mayor = num2;
+    } else {
+        mayor = num3;
+    }
+
+    // Comparación para encontrar el menor
+    if (num1 <= num2 && num1 <= num3) {
+        menor = num1;
+    } else if (num2 <= num1 && num2 <= num3) {
+        menor = num2;
+    } else {
+        menor = num3;
+    }
+
+    printf("El mayor es: %d\n", mayor);
+    printf("El menor es: %d\n", menor);
+}
+*/
+
+//3
+/*
+
+int main() {
+    int N;
+    int suma = 0;
+
+    printf("Ingrese un numero entero positivo N: ");
+    scanf("%d", &N);
+
+    suma = sumaMenoresAN(N, suma); // Llamada correcta a la función con los parámetros adecuados
+    printf("La suma de los numeros enteros positivos menores que %d es: %d\n", N, suma);
+
+    return 0;
+}
+
+// Declaración de la función con los parámetros necesarios
+int sumaMenoresAN(int N, int suma) {
+    for (int i = 1; i < N; i++) { // Se agrega i++ para incrementar el valor de i en cada iteración
+        suma = suma + i;
+    }
+    return suma;
+}
+*/
+
+//4
+/*
+int main() {
+    int numero;
+
+    printf("Ingrese un numero entero para mostrar su tabla de multiplicar: ");
+    scanf("%d", &numero);
+
+    mostrarTablaMultiplicar(numero);
+
+    return 0;
+}
+
+void mostrarTablaMultiplicar(int numero) {
+    printf("Tabla de multiplicar del %d:\n", numero);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", numero, i, numero * i);
+    }
+}
+*/
+
+//5
+
+float suma(float , float );
+float resta(float , float );
+float multiplicacion(float , float );
+float division(float , float );
+
+
+
+
+int main() {
+    float num1, num2;
+    char operador;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%f", &num1);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%f", &num2);
+
+    printf("Ingrese el operador (+, -, *, /): ");
+    scanf(" %c", &operador);
+
+    switch (operador) {
+        case '+':
+            printf("Resultado: %.2f\n", suma(num1, num2));
+            break;
+        case '-':
+            printf("Resultado: %.2f\n", resta(num1, num2));
+            break;
+        case '*':
+            printf("Resultado: %.2f\n", multiplicacion(num1, num2));
+            break;
+        case '/':
+            printf("Resultado: %.2f\n", division(num1, num2));
+            break;
+        default:
+            printf("Operador invalido.\n");
+            break;
+    }
+
+    return 0;
+}
+
+
+
+
+// Función para sumar dos números
+float suma(float num1, float num2) {
+    return num1 + num2;
+}
+
+// Función para restar dos números
+float resta(float num1, float num2) {
+    return num1 - num2;
+}
+
+// Función para multiplicar dos números
+float multiplicacion(float num1, float num2) {
+    return num1 * num2;
+}
+
+// Función para dividir dos números
+float division(float num1, float num2) {
+    // Verificar si el divisor es cero para evitar la división por cero
+    if (num2 != 0) {
+        return num1 / num2;
+    } else {
+        printf("Error: Division por cero.\n");
+        return 0;
+    }
+}
+
+
+
+
